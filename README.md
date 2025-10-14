@@ -71,3 +71,4 @@ After fine tuning the model can detect the right category of objects with high c
 
 ## Contributing
 Feel free to open issues, suggest improvements, or submit pull requests. If you found this repository useful, consider giving it a star to make it more visible to others!
+
