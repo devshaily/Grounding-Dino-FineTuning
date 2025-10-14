@@ -1,22 +1,32 @@
 # Grounding DINO Fine-tuning 🦖
 
+This repository builds upon the original work by  
+[**IDEA-Research/GroundingDINO**](https://github.com/IDEA-Research/GroundingDINO)  
+and the open-source implementation by  
+[**Techwolf (Gitee)**](https://gitee.com/techwolf/Grounding-Dino-FineTuning).  
 
-We have expanded on the original DINO  repository 
-https://github.com/IDEA-Research/GroundingDINO 
-by introducing the capability to train the model with image-to-text grounding. This capability is essential in applications where textual descriptions must align with regions of an image. For instance, when the model is given a caption "a cat on the sofa," it should be able to localize both the "cat" and the "sofa" in the image.
+### 🧩 Additional Info:
+This implementation introduces the capability to **train the model with image-to-text grounding** — a crucial feature in applications where textual descriptions must align with image regions.  
+For instance, when the model is given a caption *"a cat on the sofa"*, it should be able to localize both the *"cat"* and the *"sofa"* in the image.
 
-## Features:
+### 🧠 Author’s Note:
+I have **extended and customized** this implementation for my own experiments on **fine-tuning, evaluation, and visualization** of the Grounding DINO model on a custom dataset.  
+All my scripts are saved in the **`myscripts/`** folder.
+
+In addition, since many developers face environment setup issues, I have included my working **Conda environment file** (`gdino_env.yml`) in **`conda_env_file/`** folder to make replication and setup easier.
+
+## ✨ Features:
 
 - **Fine-tuning DINO**: This extension works allows you to fine-tune DINO on your custom dataset.
 - **Bounding Box Regression**: Uses Generalized IoU and Smooth L1 loss for improved bounding box prediction.
 - **Position-aware Logit Losses**: The model not only learns to detect objects but also their positions in the captions.
 - **NMS**: We also implemented phrase based NMS to remove redundant boxes of same objects
 
+## ⚙️ Installation:
+Follow the installation steps from the [original GroundingDINO repository](https://github.com/IDEA-Research/GroundingDINO).  
+Ensure all prerequisites are installed before running training or testing.
 
-## Installation:
-See original Repo for installation of required dependencies essentially we need to install prerequisits and 
-
-## Train: 
+## 🧩 Train: 
 
 1. Prepare your dataset with images and associated textual captions. A tiny dataset is given multimodal-data to demonstrate the expected data format.
 3. Run the train.py for training.
