@@ -1,0 +1,30 @@
+Dataset Summary:
+- Valid images: 2930
+- Valid bounding boxes: 3804
+- Skipped zero-area boxes: 1131
+
+Dataset Summary:
+- Valid images: 297
+- Valid bounding boxes: 419
+- Skipped zero-area boxes: 163
+
+
+def train(model, train_ann_file, val_ann_file, epochs=1, 
+          save_path='D:/Deep_Learning/Grounding-Dino-FineTuning/weights_myds',
+          save_epoch=5, early_stop_patience=10):
+    """Enhanced training with stabilization techniques"""
+    
+    # Create save directory
+    os.makedirs(save_path, exist_ok=True)
+    
+    # Read datasets
+    train_ann_Dict = read_dataset(train_ann_file)
+    val_ann_Dict = read_dataset(val_ann_file) if val_ann_file else None
+    visualize_annotations(train_ann_Dict)
+    
+    # Setup optimizer with lower initial LR and weight decay
+    optimizer = optim.AdamW(model.parameters(), lr=5e-6, weight_decay=1e-4)  # Changed to AdamW
+
+
+Mo: Ppt prep
+Tu: Gdino training
