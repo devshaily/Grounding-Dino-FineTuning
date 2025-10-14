@@ -1,9 +1,6 @@
 # Grounding DINO Fine-tuning 🦖
 
-This repository builds upon the original work by  
-[**IDEA-Research/GroundingDINO**](https://github.com/IDEA-Research/GroundingDINO)  
-and the open-source implementation by  
-[**Techwolf (Gitee)**](https://gitee.com/techwolf/Grounding-Dino-FineTuning).  
+This repository builds upon the original work by [**IDEA-Research/GroundingDINO**](https://github.com/IDEA-Research/GroundingDINO) and the open-source implementation by [**Techwolf (Gitee)**](https://gitee.com/techwolf/Grounding-Dino-FineTuning).  
 
 ### 🧩 Additional Info:
 This implementation introduces the capability to **train the model with image-to-text grounding** — a crucial feature in applications where textual descriptions must align with image regions.  
